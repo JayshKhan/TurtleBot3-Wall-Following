@@ -1,5 +1,7 @@
 ## Wall Following with PID Control for TurtleBot3 in ROS Noetic
-https://github.com/JayshKhan/TurtleBot3-Wall-Following/blob/main/Video/MR%20Assignment.mkv
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/WSBhR1azYpI/0.jpg)](https://www.youtube.com/watch?v=WSBhR1azYpI)
+
+https://youtu.be/WSBhR1azYpI
 
 This report details the implementation of a wall following algorithm for the TurtleBot3 in ROS Noetic, utilizing a PID controller to fine-tune the robot's path. 
 
