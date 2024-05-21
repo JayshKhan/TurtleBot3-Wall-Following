@@ -8,7 +8,7 @@ This report details the implementation of a wall following algorithm for the Tur
 - **Gazebo Simulator:** Gazebo 11
 - **Python:** Python 3
 - **Nodes:**
-    - `wall_follower_node` (This node subscribes to laser scan data, calculates control commands, and publishes them to the robot's velocity controller)
+    - `wall_follow.py` (This node subscribes to laser scan data, calculates control commands, and publishes them to the robot's velocity controller)
 
 **2. Libraries:**
 
@@ -20,7 +20,7 @@ This report details the implementation of a wall following algorithm for the Tur
 **3. System Architecture:**
 
 - **Sensor:** The TurtleBot3's laser range finder provides real-time distance readings to nearby objects.
-- **Perception:** The `wall_follower_node` receives laser scan data and processes it to detect the wall.
+- **Perception:** The `wall_follow` receives laser scan data and processes it to detect the wall.
 - **Control:**  The PID controller calculates the robot's angular velocity based on the distance to the wall, aiming to maintain a constant distance from it.
 - **Action:** The `cmd_vel_pub` publishes the calculated velocity commands to the robot's velocity controller, allowing it to move and rotate accordingly.
 
@@ -49,9 +49,8 @@ This report details the implementation of a wall following algorithm for the Tur
 **6. Running the code:**
 
 1. Start ROS master: `roscore`
-2. Launch TurtleBot3 simulation: `roslaunch turtlebot3_gazebo turtlebot3_world.launch`
-3. Run the wall following node: `rosrun your_package wall_follower_node.py` 
-   (Replace 'your_package' with the actual name of the package where you saved the code.)
+2. Launch TurtleBot3 simulation: `roslaunch turtlebot3_gazebo turtlebot3_house.launch`
+3. Run the wall following node: `rosrun wall_follow_turtlebot wall_follow.py` 
 
 **7. Conclusion:**
 
